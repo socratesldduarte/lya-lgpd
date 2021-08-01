@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7759431e303e2d722a264a8a991a9e84",
+    "content-hash": "db1808297031f81cec7c1bcd096c6bc7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2688,6 +2688,53 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "socratesldduarte/laravel-database-encryption",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/socratesldduarte/laravel-database-encryption.git",
+                "reference": "681dd39b7e7a7b0fc6a3cff0cc954dfe95b7765e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/socratesldduarte/laravel-database-encryption/zipball/681dd39b7e7a7b0fc6a3cff0cc954dfe95b7765e",
+                "reference": "681dd39b7e7a7b0fc6a3cff0cc954dfe95b7765e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.4",
+                "phpunit/phpunit": "^9.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "socratesldduarte\\DBEncryption\\Providers\\DBEncryptionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "socratesldduarte\\DBEncryption\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Socrates Duarte",
+                    "email": "socratesldduarte@gmail.com"
+                }
+            ],
+            "description": "Auto Encrypt and Decrypt Database through Eloquent",
+            "support": {
+                "source": "https://github.com/socratesldduarte/laravel-database-encryption/tree/1.1.1"
+            },
+            "time": "2021-05-12T23:47:42+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

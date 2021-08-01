@@ -3,12 +3,24 @@
 ## Leverage Your Achievements - LGPD & Criptografia
 
 Esse repostiório é público e foi criado para o Meetup "Leverage Your Achievements - LGPD & Criptografia", de 4/8/2021.
+
 O conteúdo é um exemplo de implementação de criptografia AES-256 em um projeto Laravel 8.5, permitindo utilizar o ORM Eloquent para acessar / gravar informações criptografadas no banco de dados.
 
-## Instalação
+## Instalação e Configuração
 
 Para instalar o repositório, certifique-se de possuir os requisitos para a instalação do Laravel (https://laravel.com/docs/8.x).
-Após clonar o repositório, acesse a pasta do repositório e execute _composer install_.
+
+Após clonar o repositório, acesse a pasta do repositório e execute _composer install_ e também _npm install_.
+
+O repositório utiliza dockerização com o sail - então execute _./vendor/bin/sail up -d_ para inicializar o sail em background.
+
+Para gerar o banco de dados (migrations & seeders), execute _./vendor/bin/sail artisan migrate:fresh --seed_
+
+Ao rodar as migrations e seeders, são gerados 10 registros de clientes no banco de dados mysql.
+
+Após a execução do sail, o aplicativo pode ser acessado em seu navegador, no endereço _http://localhost_
+
+A tela inicial lista todos os clientes do banco de dados e possui opção para incluir novo cliente, ordernar pelas colunas (id, name, email, cpf, nascimento), editar ou excluir linhas.
 
 ## Laravel Sponsors
 

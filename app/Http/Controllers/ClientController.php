@@ -25,7 +25,7 @@ class ClientController extends Controller
         $clients = $this->client;
         if (isset($request->order)) {
             if (in_array($request->order, ['id', 'name', 'birthday', 'document', 'email'])) {
-                $clients = $clients->orderBy($request->order);
+                $clients = $clients->orderByEncrypted($request->order, 'ASC');
             }
         }
         $clients = $clients->get();

@@ -22,3 +22,11 @@ Route::get('/', [ClientController::class, 'index'])->name('index');
 Route::get('/store', [ClientController::class, 'store'])->name('store');
 Route::get('/update/{client}', [ClientController::class, 'update'])->name('update');
 Route::get('/destroy/{client}', [ClientController::class, 'destroy'])->name('destroy');
+
+
+Route::get('/teste', function() {
+    $clientes = \App\Models\Client::orderByEncrypted('name')->get();
+    foreach ($clientes as $cliente) {
+        echo $cliente->name . '<br>';
+    }
+});
